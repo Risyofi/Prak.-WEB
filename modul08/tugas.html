@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Aplikasi Pengambil Keputusan</title>
+    </head>
+    <body>
+        <h1>Aplikasi Pengambil Keputusan</h1>
+        <p>Masukkan nilai: </p>
+        <input type="text" id="value-nilai" onkeypress="handleKeyPress(event)">
+        <button onclick="tampilkan_keputusan()">Tampilkan Keputusan</button>
+        <p id="value-hasil"></p>
+        <script>
+            function tampilkan_keputusan() {
+                let nilai = document.getElementById("value-nilai").value;
+                nlai = parseInt(nilai);
+                let keputusan;
+                if (nilai >= 0 && nilai <= 20) {
+                    keputusan = "E";
+                } else if (nilai >= 21 && nilai <= 40) {
+                    keputusan = "D";
+                } else if (nilai >= 41 && nilai <= 60) {
+                    keputusan = "C";
+                } else if (nilai >= 61 && nilai <= 80) {
+                    keputusan = "B";
+                } else if (nilai >= 81 && nilai <= 100) {
+                    keputusan = "A";
+                } else {
+                    keputusan = "Nilai yang dimasukkan tidak valid.";
+                }
+                document.getElementById("value-hasil").innerHTML = "keputusan : " + keputusan;
+            }
+
+            function handleKeyPress(event) {
+                if (event.keyCode == 13) {
+                    tampilkan_keputusan();
+                }
+            }
+        </script>
+    </body>
+</html>
+
+<!--Muhammad Irfan Abidin-->
