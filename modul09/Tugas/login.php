@@ -20,5 +20,8 @@
       </div>
     </form>
   </div>
+  <footer class="footer">
+    <p align="center">&copy; <?php echo date('Y'); ?> L200210021</p>
+  </footer>
 </body>
 </html>
