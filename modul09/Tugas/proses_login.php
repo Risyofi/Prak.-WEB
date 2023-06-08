@@ -1,29 +1,31 @@
 <?php
-session_start();
-error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 $koneksi = mysqli_connect('localhost', 'root', '', 'informatikadb');
 if (!$koneksi) {
     die("Koneksi database gagal: " . mysqli_connect_error());
 }
 
+// Retrieve form data
 $username = $_POST['username'];
 $password = $_POST['password'];
+$nama = $_POST['nama'];
+$status = $_POST['status'];
 
-$sql = "SELECT * FROM user WHERE username='$username' AND password='$password'";
+$sql = "SELECT * FROM user WHERE username='$username'";
 $query = mysqli_query($koneksi, $sql);
 $row = mysqli_fetch_assoc($query);
 
 if ($row) {
-    $_SESSION['username'] = $row['username'];
-    $_SESSION['nama'] = $row['nama'];
-    $_SESSION['status'] = $row['status'];
-
-    if ($row['status'] == "Administrator") {
-        header("Location: admin_dashboard.php");
-    } elseif ($row['status'] == "Member") {
-        header("Location: member_dashboard.php");
-    }
-} else {
-    header("Location: login.php?login_error=true");
+    header("Location: sign_up.php?error=username_exists");
+    exit();
 }
-?>
+
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+$sql = "INSERT INTO user (username, password, nama, status) VALUES ('$username', '$hashedPassword', '$nama', '$status')";
+$query = mysqli_query($koneksi, $sql);
+
+if ($query) {
+     header("Location: login.php");
+} else {
+    header("Location: sign_up.php?error=signup_failed");
+}
