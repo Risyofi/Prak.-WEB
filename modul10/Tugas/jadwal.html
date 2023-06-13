@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Jadwal Kuliah</title>
+    <style>
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ccc;
+        }
+
+        /* Tambahkan CSS responsif */
+        @media (max-width: 600px) {
+            table, th, td {
+                font-size: 12px;
+            }
+        }
+
+        /* Tambahkan CSS agar lebar kolom "Mata Kuliah" sama untuk setiap hari */
+        .table-container table th:nth-child(1),
+        .table-container table td:nth-child(1) {
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Jadwal Kuliah</h1>
+
+    <label for="semesterSelect">Pilih Semester:</label>
+    <select id="semesterSelect">
+        <option value="Semester 3">Semester 3</option>
+        <option value="Semester 4">Semester 4</option>
+        <option value="Semester 5">Semester 5</option>
+    </select>
+
+    <div id="jadwalContainer"></div>
+
+    <script>
+        var jadwalContainer = document.getElementById('jadwalContainer');
+        var semesterSelect = document.getElementById('semesterSelect');
+
+        semesterSelect.addEventListener('change', function() {
+            var selectedSemester = semesterSelect.value;
+
+            fetch('jadwal.json')
+                .then(response => response.json())
+                .then(data => {
+                    var jadwalData = data[selectedSemester];
+
+                    jadwalContainer.innerHTML = '';
+
+                    for (var hari in jadwalData) {
+                        if (jadwalData.hasOwnProperty(hari)) {
+                            var jadwal = jadwalData[hari];
+
+                            // Tambahkan judul hari
+                            var judulHari = document.createElement('h2');
+                            judulHari.textContent = hari;
+                            jadwalContainer.appendChild(judulHari);
+
+                            // Buat container tabel
+                            var tableDiv = document.createElement('div');
+                            tableDiv.className = 'table-container';
+                            jadwalContainer.appendChild(tableDiv);
+
+                            // Buat tabel jadwal
+                            var jadwalTable = document.createElement('table');
+                            jadwalTable.id = hari + 'Table';
+                            tableDiv.appendChild(jadwalTable);
+
+                            // Buat header tabel
+                            var tableHead = document.createElement('thead');
+                            var tableHeadRow = document.createElement('tr');
+                            var headerLabels = ['Mata Kuliah', 'Sks', 'Jam', 'Kelas', 'Ruang', 'Dosen Pengampu'];
+
+                            for (var i = 0; i < headerLabels.length; i++) {
+                                var headerCell = document.createElement('th');
+                                headerCell.textContent = headerLabels[i];
+                                tableHeadRow.appendChild(headerCell);
+                            }
+
+                            tableHead.appendChild(tableHeadRow);
+                            jadwalTable.appendChild(tableHead);
+
+                            // Buat body tabel
+                            var tableBody = document.createElement('tbody');
+
+                            for (var i = 0; i < jadwal.length; i++) {
+                                var row = tableBody.insertRow();
+                                var mataKuliahCell = row.insertCell(0);
+                                var sksCell = row.insertCell(1);
+                                var jamCell = row.insertCell(2);
+                                var kelasCell = row.insertCell(3);
+                                var ruangCell = row.insertCell(4);
+                                var dosenCell = row.insertCell(5);
+
+                                mataKuliahCell.innerHTML = jadwal[i].MataKuliah;
+                                sksCell.innerHTML = jadwal[i].Sks;
+                                jamCell.innerHTML = jadwal[i].Jam;
+                                kelasCell.innerHTML = jadwal[i].Kelas;
+                                ruangCell.innerHTML = jadwal[i].Ruang;
+                                dosenCell.innerHTML = jadwal[i].DosenPengampu;
+                            }
+
+                            jadwalTable.appendChild(tableBody);
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+
+        // Pilih semester pertama saat halaman dimuat
+        semesterSelect.selectedIndex = 0;
+        semesterSelect.dispatchEvent(new Event('change'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+    "mahasiswa" : [
+        {
+            "namaLengkap": "Muhammad Irfan Abidin",
+            "alamat": "Gawanan, Colomadu, Karanganyar",
+            "prodi": "Informatika",
+            "usia": "20",
+            "lulus": "false",
+            "mataKuliah": [
+                "Praktikum Sistem Basis Data",
+                "Sistem Basis Data",
+                "Algoritma dan Struktur Data",
+                "Bahasa Indonesia",
+                "Jaringan Komputer",
+                "Kemuhammadiyahan",
+                "Organisasi dan Arsitektur Komputer",
+                "Praktikum Algoritma dan Struktur Data",
+                "Praktikum Jaringan Komputer",
+                "Praktikum Pemrograman WEB",
+                "Rekayasa Perangkat Lunak",
+                "Kewarganegaraan"
+            ],
+            "nilai": {
+                "Praktikum Sistem Basis Data": "A",
+                "Sistem Basis Data": "A",
+                "Algoritma dan Struktur Data": "A",
+                "Bahasa Indonesia": "A",
+                "Jaringan Komputer": "A",
+                "Kemuhammadiyahan": "A",
+                "Organisasi dan Arsitektur Komputer": "A",
+                "Praktikum Algoritma dan Struktur Data": "A",
+                "Praktikum Jaringan Komputer": "A",
+                "Praktikum Pemrograman WEB": "A",
+                "Rekayasa Perangkat Lunak": "A",
+                "Kewarganegaraan": "A"
+            }
+        },
+        {
+            "namaLengkap": "Budi Setiawan",
+            "alamat": "Jln Pusaka Jawa No 12 Boyolali",
+            "prodi": "Informatika",
+            "usia": "2i",
+            "lulus": "false",
+            "mataKuliah": [
+                "Jaringan Komputer",
+                "Sistem Basis Data",
+                "Skripsi"
+            ],
+            "nilai": {
+                "Aljabar Liniear": "A",
+                "Logika Matematika": "A"
+            }
+        }
+    ]
+}    

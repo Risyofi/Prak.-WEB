@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Mahasiswa</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+        .detail {
+            margin-top: 10px;
+        }
+        .detail-label {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Mahasiswa</h1>
+        <select id="selectMahasiswa" onchange="displaySelectedMahasiswa()">
+            <option value="">Pilih Mahasiswa</option>
+        </select>
+        <br>
+        <div id="detailMahasiswa"></div>
+    </div>
+
+    <script>
+        var selectMahasiswa = document.getElementById('selectMahasiswa');
+        var detailMahasiswa = document.getElementById('detailMahasiswa');
+
+        fetch('dataMahasiswa.json')
+            .then(response => response.json())
+            .then(data => {
+                // Mengisi dropdown dengan opsi namaLengkap
+                data.mahasiswa.forEach(function(mahasiswa) {
+                    var option = document.createElement('option');
+                    option.value = mahasiswa.namaLengkap;
+                    option.textContent = mahasiswa.namaLengkap;
+                    selectMahasiswa.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+        // Menampilkan detail mahasiswa berdasarkan pilihan dropdown
+        function displaySelectedMahasiswa() {
+            var selectedNama = selectMahasiswa.value;
+
+            fetch('dataMahasiswa.json')
+                .then(response => response.json())
+                .then(data => {
+                    var selectedMahasiswa = data.mahasiswa.find(function(mahasiswa) {
+                        return mahasiswa.namaLengkap === selectedNama;
+                    });
+
+                    if (selectedMahasiswa) {
+                        var detailHTML = "<h2>Detail Mahasiswa:</h2>" +
+                                         "<p class='detail'><span class='detail-label'>Nama Lengkap: </span>" + selectedMahasiswa.namaLengkap + "</p>" +
+                                         "<p class='detail'><span class='detail-label'>Alamat: </span>" + selectedMahasiswa.alamat + "</p>" +
+                                         "<p class='detail'><span class='detail-label'>Program Studi: </span>" + selectedMahasiswa.prodi + "</p>" +
+                                         "<p class='detail'><span class='detail-label'>Usia: </span>" + selectedMahasiswa.usia + "</p>" +
+                                         "<p class='detail'><span class='detail-label'>Lulus: </span>" + selectedMahasiswa.lulus + "</p>" +
+                                         "<p class='detail detail-label'>Mata Kuliah:</p>" +
+                                         "<ul>";
+
+                        selectedMahasiswa.mataKuliah.forEach(function(mataKuliah) {
+                            detailHTML += "<li>" + mataKuliah + "</li>";
+                        });
+
+                        detailHTML += "</ul>";
+
+                        detailMahasiswa.innerHTML = detailHTML;
+                    } else {
+                        detailMahasiswa.innerHTML = "";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+</html>

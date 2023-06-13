@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menampilkan data JSON di browser</title>
+</head>
+<body>
+    <h1>Data Item</h1>
+    <div id="data-container"></div>
+
+    <script>
+        // Memuat data dari file JSON eksternal menggunakan Fetch API
+        fetch('external.json')
+            .then(response => response.json())
+            .then(data => {
+                // Memasukkan data ke dalam elemen dengan id "data-container"
+                document.getElementById('data-container').innerHTML = `
+                    <p><strong>User ID:</strong> ${data.userId}</p>
+                    <p><strong>ID:</strong> ${data.id}</p>
+                    <p><strong>Title:</strong> ${data.title}</p>
+                    <p><strong>Body:</strong> ${data.body}</p>
+                    <p><strong>Completed:</strong> ${data.completed}</p>
+                    <p><strong>Price:</strong> ${data.price}</p>
+                    <p><strong>Tags:</strong> ${data.tags.join(', ')}</p>
+                    <p><strong>Author:</strong> ${data.details.author}</p>
+                    <p><strong>Published:</strong> ${data.details.published}</p>
+                    <p><strong>Review:</strong> ${data.review}</p>
+                `;
+            })
+            .catch(error => console.log(error));
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menampilkan data JSON di browser</title>
+</head>
+<body>
+    <h1>Data Mahasiswa</h1>
+    <div id="data-container"></div>
+
+    <script>
+        // Menggunakan fetch API untuk mengambil data JSON
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                // Mengakses properti data.json dan memasukkannya ke dalam elemen dengan id "data-container"
+                document.getElementById('data-container').innerHTML = `
+                    <p><strong>Nama Lengkap:</strong> ${data.namaLengkap}</p>
+                    <p><strong>Alamat:</strong> ${data.alamat}</p>
+                    <p><strong>Program Studi:</strong> ${data.prodi}</p>
+                    <p><strong>Usia:</strong> ${data.usia}</p>
+                    <p><strong>Lulus:</strong> ${data.lulus}</p>
+                    <h2>Mata Kuliah:</h2>
+                    <ul>
+                        ${data.mataKuliah.map(mataKuliah => `<li>${mataKuliah}</li>`).join('')}
+                    </ul>
+                    <h2>Nilai:</h2>
+                    <ul class="nilai-list">
+                        ${Object.entries(data.nilai).map(([mataKuliah, nilai]) => `<li><span class="nilai-label">${mataKuliah}:</span> ${nilai}</li>`).join('')}
+                    </ul>
+                `;
+            })
+            .catch(error => console.log(error));
+    </script>
+</body>
+</html>

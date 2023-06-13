@@ -1,0 +1,212 @@
+{
+  "Semester 3": {
+    "Senin": [
+      {
+        "MataKuliah": "Praktikum Algoritma dan Struktur Data",
+        "Sks": 1,
+        "Jam": "9.50 – 11.30 am",
+        "Kelas": "B",
+        "Ruang": "LSTIF",
+        "DosenPengampu": "Yudi Wahyu Wibowo Wahyu Wibowo"
+      },
+      {
+        "MataKuliah": "Bahasa Indonesia",
+        "Sks": 3,
+        "Jam": "12.30 – 2.10 pm",
+        "Kelas": "A",
+        "Ruang": "J0403",
+        "DosenPengampu": "Lusiana Pujiastuti"
+      },
+      {
+        "MataKuliah": "Algoritma dan Struktur Data",
+        "Sks": 2,
+        "Jam": "3.30 – 6.00 pm",
+        "Kelas": "A",
+        "Ruang": "J0410",
+        "DosenPengampu": "Endang Wahyu Pamungkas"
+      }
+    ],
+    "Selasa": [
+      {
+        "MataKuliah": "Praktikum WEB",
+        "Sks": 1,
+        "Jam": "12.30 – 2.10 pm",
+        "Kelas": "F",
+        "Ruang": "LRPL",
+        "DosenPengampu": "Widi Widayat"
+      }
+    ]
+  },
+  "Semester 4": {
+    "Senin": [
+      {
+        "MataKuliah": "Praktikum Algoritma dan Struktur Data",
+        "Sks": 1,
+        "Jam": "9.50 – 11.30 am",
+        "Kelas": "B",
+        "Ruang": "LSTIF",
+        "DosenPengampu": "Yudi Wahyu Wibowo"
+      },
+      {
+        "MataKuliah": "Bahasa Indonesia",
+        "Sks": 3,
+        "Jam": "12.30 – 2.10 pm",
+        "Kelas": "A",
+        "Ruang": "J0403",
+        "DosenPengampu": "Lusiana Pujiastuti"
+      },
+      {
+        "MataKuliah": "Algoritma dan Struktur Data",
+        "Sks": 2,
+        "Jam": "3.30 – 6.00 pm",
+        "Kelas": "A",
+        "Ruang": "J0410",
+        "DosenPengampu": "Endang Wahyu Pamungkas"
+      }
+    ],
+    "Selasa": [
+      {
+        "MataKuliah": "Praktikum WEB",
+        "Sks": 1,
+        "Jam": "12.30 – 2.10 pm",
+        "Kelas": "F",
+        "Ruang": "LRPL",
+        "DosenPengampu": "Widi Widayat"
+      },
+      {
+        "MataKuliah": "Jaringan Komputer",
+        "Sks": 3,
+        "Jam": "3.30 – 6.00 pm",
+        "Kelas": "A",
+        "Ruang": "J0407",
+        "DosenPengampu": "Khanun Roisatul Ummah"
+      }
+    ],
+    "Rabu": [
+      {
+        "MataKuliah": "Kemuhammadiyahan",
+        "Sks": 2,
+        "Jam": "8.10 – 9.50 am",
+        "Kelas": "A",
+        "Ruang": "J0403",
+        "DosenPengampu": "Yeti"
+      },
+      {
+        "MataKuliah": "Praktikum Sistem Basis Data",
+        "Sks": 1,
+        "Jam": "9.50 – 11.30 am",
+        "Kelas": "A",
+        "Ruang": "LRPL",
+        "DosenPengampu": "Azizah Fatmawati"
+      },
+      {
+        "MataKuliah": "Kewarganegaraan",
+        "Sks": 2,
+        "Jam": "2.10 – 4.20 pm",
+        "Kelas": "A",
+        "Ruang": "JSEM2",
+        "DosenPengampu": "Haryono Yuwono"
+      }
+    ],
+    "Kamis": [
+      {
+        "MataKuliah": "Rekayasa Perangkat Lunak",
+        "Sks": 3,
+        "Jam": "12.30 – 3.00 pm",
+        "Kelas": "A",
+        "Ruang": "J0407",
+        "DosenPengampu": "Yusuf Sulistyo Nugroho"
+      },
+      {
+        "MataKuliah": "Organisasi dan Arsitektur Komputer",
+        "Sks": 2,
+        "Jam": "3.30 – 4.30 pm",
+        "Kelas": "C",
+        "Ruang": "JSEM2",
+        "DosenPengampu": "Helmi Imaduddin"
+      }
+    ],
+    "Jumat": [
+      {
+        "MataKuliah": "Sistem Basis Data",
+        "Sks": 3,
+        "Jam": "6.30 – 9.00 am",
+        "Kelas": "A",
+        "Ruang": "J0408",
+        "DosenPengampu": "Helmi Imaduddin"
+      },
+      {
+        "MataKuliah": "Praktikum Jaringan Komputer",
+        "Sks": 1,
+        "Jam": "12.30 - 2.00 pm",
+        "Kelas": "B",
+        "Ruang": "LJARKOM",
+        "DosenPengampu": "Ihsan Cahyo Utomo"
+      }
+    ]
+  },
+  "Semester 5": {
+    "Senin": [
+      {
+        "MataKuliah": "Praktikum Algoritma dan Struktur Data",
+        "Sks": 1,
+        "Jam": "9.50 – 11.30 am",
+        "Kelas": "B",
+        "Ruang": "LSTIF",
+        "DosenPengampu": "Yudi Wahyu Wibowo"
+      },
+      {
+        "MataKuliah": "Bahasa Indonesia",
+        "Sks": 3,
+        "Jam": "12.30 – 2.10 pm",
+        "Kelas": "A",
+        "Ruang": "J0403",
+        "DosenPengampu": "Lusiana Pujiastuti"
+      },
+      {
+        "MataKuliah": "Algoritma dan Struktur Data",
+        "Sks": 2,
+        "Jam": "3.30 – 6.00 pm",
+        "Kelas": "A",
+        "Ruang": "J0410",
+        "DosenPengampu": "Endang Wahyu Pamungkas"
+      }
+    ],
+    "Selasa": [
+      {
+        "MataKuliah": "Praktikum WEB",
+        "Sks": 1,
+        "Jam": "12.30 – 2.10 pm",
+        "Kelas": "F",
+        "Ruang": "LRPL",
+        "DosenPengampu": "Widi Widayat"
+      },
+      {
+        "MataKuliah": "Jaringan Komputer",
+        "Sks": 3,
+        "Jam": "3.30 – 6.00 pm",
+        "Kelas": "A",
+        "Ruang": "J0407",
+        "DosenPengampu": "Khanun Roisatul Ummah"
+      }
+    ],
+    "Rabu": [
+      {
+        "MataKuliah": "Kemuhammadiyahan",
+        "Sks": 2,
+        "Jam": "8.10 – 9.50 am",
+        "Kelas": "A",
+        "Ruang": "J0403",
+        "DosenPengampu": "Yeti"
+      },
+      {
+        "MataKuliah": "Praktikum Sistem Basis Data",
+        "Sks": 1,
+        "Jam": "9.50 – 11.30 am",
+        "Kelas": "A",
+        "Ruang": "LRPL",
+        "DosenPengampu": "Azizah Fatmawati"
+      }
+    ]
+  }
+}
