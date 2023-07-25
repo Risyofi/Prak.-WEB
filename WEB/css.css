@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#tambahModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 400px;
+    margin: 0 auto;
+}
+
+#tambahModal h2 {
+    margin-top: 0;
+}
+
+#tambahModal label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+#tambahModal input[type="text"],
+#tambahModal input[type="number"],
+#tambahModal input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#tambahModal div {
+    text-align: right;
+}
+
+#cancelModalBtn {
+    background-color: #ccc;
+    margin-right: 10px;
+}
+
+#cancelModalBtn:hover {
+    background-color: #bbb;
+}
+
