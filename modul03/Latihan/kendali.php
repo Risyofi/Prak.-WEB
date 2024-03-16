@@ -10,9 +10,9 @@
         </form>
         <?php
         error_reporting(E_ALL^E_NOTICE);
-        $nilai = $_POST['nilai'];
-        $submit = $_POST['submit'];
-        if($submit){
+        if(isset($_POST['submit'])){
+            $nilai = $_POST['nilai'];
+            
             if($nilai==''){
                 $huruf='"Nilai kosong/belum diisi"';
             }elseif($nilai<=20){
@@ -26,7 +26,7 @@
             }elseif($nilai<=100){
                 $huruf = 'A';
             }else{
-                $huruf = '"Nilai yang dimasukkan salah';
+                $huruf = 'Nilai yang dimasukkan salah';
             }
         echo "Nilai angka adalah $nilai</br>";
         echo "Maka nilai huruf adalah $huruf";
