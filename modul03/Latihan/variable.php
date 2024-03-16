@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Variable</title>
@@ -11,15 +12,15 @@
             <p><input type="submit" value="Kirim" name="submit"></p>
         </form>
         <?php
-        error_reporting (E_ALL^E_NOTICE);
-        $nama = $_POST['nama'];
-        $email = $_POST['email'];
-        $komentar = $_POST['komentar'];
-        $submit = $_POST['kirim'];
-        if($submit){
-            echo"</br>Nama : $nama";
-            echo"</br>Email : $email";
-            echo"</br>Komentar : $komentar";
+        error_reporting(E_ALL ^ E_NOTICE);
+        if(isset($_POST['submit'])){
+            $nama = $_POST['nama'];
+            $email = $_POST['email'];
+            $komentar = $_POST['komentar'];
+            
+            echo "<br>Nama : $nama";
+            echo "<br>Email : $email";
+            echo "<br>Komentar : $komentar";
         }
         ?>
     </body>
